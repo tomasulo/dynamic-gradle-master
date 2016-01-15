@@ -1,0 +1,23 @@
+rootProject.name = "master"
+
+def projects = new File("gradle/projects.gradle")
+
+if (hasProperty("refreshProjects")) {
+	println "Refreshing projects"
+	projects.delete()
+}
+
+if (!projects.exists()) {
+	new File("../").eachDir() { dir ->
+		if (new File(dir, "settings.gradle").exists()) {  
+			return
+		}
+		if (new File(dir, "build.gradle").exists()) {
+			println "Adding $dir.name to projects"
+			projects.append "includeFlat '$dir.name'\n"
+		}
+	}
+}
+
+apply from: "gradle/projects.gradle"
+
