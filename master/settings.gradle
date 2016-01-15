@@ -1,6 +1,6 @@
 rootProject.name = "master"
 
-def projects = new File("gradle/projects.gradle")
+def projects = new File("$rootDir/gradle/projects.gradle")
 
 if (hasProperty("refreshProjects")) {
 	println "Refreshing projects"
@@ -8,7 +8,7 @@ if (hasProperty("refreshProjects")) {
 }
 
 if (!projects.exists()) {
-	new File("../").eachDir() { dir ->
+	new File("$rootDir").getParentFile().eachDir() { dir ->
 		if (new File(dir, "settings.gradle").exists()) {  
 			return
 		}
