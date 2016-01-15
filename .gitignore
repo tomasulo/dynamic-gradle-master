@@ -3,3 +3,9 @@ build
 *.sublime-workspace
 projects.gradle
 .gradle
+RemoteSystemsTempFiles
+.metadata
+.classpath
+.project
+.settings
+bin
