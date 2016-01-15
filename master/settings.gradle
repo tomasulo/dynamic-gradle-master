@@ -19,5 +19,5 @@ if (!projects.exists()) {
 	}
 }
 
-apply from: "gradle/projects.gradle"
+apply from: projects
 
