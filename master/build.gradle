@@ -1,25 +1,7 @@
-buildscript {
-	repositories {
-		mavenLocal()
-	}
-	dependencies {
-		classpath "de.codecentric.gradle.plugins:greeting:1.0.1-SNAPSHOT"
-		classpath "de.codecentric.gradle.plugins:print:1.0.1-SNAPSHOT"
-	}
-}
-
 allprojects {
 	apply plugin: "eclipse"
-	apply plugin: "codenarc"
 }
 
 subprojects {
 	apply plugin: "java"
-	apply plugin: "greeting"
-	apply plugin: "print"
-	
-	hello {
-		message "hello world"
-		greeter project.name
-	}
 }

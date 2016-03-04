@@ -1,4 +1,0 @@
-hello {
-	greeter = "Tommy"
-	message = "Überschrieben aus Projekt $project.name"
-}
