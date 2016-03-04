@@ -13,7 +13,7 @@ if (!projects.exists()) {
 			return
 		}
 		if (new File(dir, "build.gradle").exists()) {
-			println "Adding $dir.name to projects"
+			println "Including $dir.name"
 			projects.append "includeFlat '$dir.name'\n"
 		}
 	}
