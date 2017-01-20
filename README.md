@@ -6,7 +6,7 @@
 
 ## Usage
 
-The dynamic master includes all projects on the same level as subprojects. For this example `gradlew projects` produces this:
+The dynamic master automatically includes all projects on the same level as subprojects. For this example `gradlew projects` produces this:
 
     Root project 'master'
     +--- Project ':project_a'
